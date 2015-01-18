@@ -16,8 +16,8 @@
 </head>
 <body>
   <div class="ui menu">
-    <a class="active item" href="#/view1">
-      <i class="home icon"></i> View 1
+    <a class="active item" ui-sref="dashboard">
+      <i class="home icon"></i> Dashboard
     </a>
     <a class="item" href="#/view2">
       <i class="mail icon"></i> View 2
@@ -36,7 +36,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ng-view></div>
+  <div ui-view></div>
 
   <div>Angular seed app: v<span app-version></span></div>
 
@@ -47,10 +47,10 @@
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/semantic/dist/semantic.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
+  <script src="dashboard/dashboard.js"></script>
+  <script src="room/room.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
