@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('myApp.version', [
-  'myApp.version.interpolate-filter',
-  'myApp.version.version-directive'
+angular.module('squidSync.version', [
+  'squidSync.version.interpolate-filter',
+  'squidSync.version.version-directive'
 ])
 
-.value('version', '0.1');
+.value('version', '0.0.1');
