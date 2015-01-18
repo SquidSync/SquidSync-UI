@@ -1,7 +1,7 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.0",
+  "name": "SquidSync",
+  "description": "A Content Enjoyment Platform",
+  "version": "0.0.1",
   "homepage": "https://github.com/angular/angular-seed",
   "license": "MIT",
   "private": true,
@@ -11,8 +11,11 @@
     "angular-loader": "1.2.x",
     "angular-mocks": "~1.2.x",
     "html5-boilerplate": "~4.3.0",
-    "semantic-ui": "~1.7.3",
     "angular-ui-router": "~0.2.13",
-    "semantic": "~1.7.3"
+    "semantic": "~1.7.3",
+    "angular-strap": "~2.1.6"
+  },
+  "resolutions": {
+    "angular": ">= 1.0.8"
   }
 }

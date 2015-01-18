@@ -5,7 +5,7 @@ angular.module('squidSync.dashboard', [
 ])
 .config(function($stateProvider) {
       $stateProvider
-          .state('dashboard', {
+          .state('core.dashboard', {
             url: "/",
             templateUrl: "dashboard/dashboard.html"
           })
