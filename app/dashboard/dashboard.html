@@ -1,22 +1,17 @@
 <div class="container" ng-controller="dashboardCtrl">
-    <div class="well">
-        <img class="center-block" src="images/logo.png">
-    </div>
+    <img class="center-block" src="images/logo.png" style="margin-top: 24px; margin-bottom: 24px;">
     <div class="row">
         <div ng-repeat="room in rooms" class="col-md-3">
             <div class="ui card">
                 <div class="image">
-                    <img src="https://placekitten.com/263/263">
+                    <img src="https://placekitten.com/256/64">
                 </div>
                 <div class="content">
-                    <a class="header" ng-click="joinRoom(room._id)">{{room.name}}</a>
-                    <div class="meta">
-                        <span class="date">{{room._id}}</span>
-                    </div>
+                    <span class="header"><a  ng-click="joinRoom(room._id)">{{room.name}}</a> <i class="user icon"></i>{{room.views}}</span>
                     <div class="description">{{room.desc}}</div>
                 </div>
                 <div class="extra content">
-                    <a><i class="user icon"></i>{{room.views}} Views</a>
+                    <span class="date">{{room._id}}</span>
                 </div>
             </div>
         </div>
