@@ -1,18 +1,17 @@
 <div class="container" ng-controller="dashboardCtrl">
-    <div class="jumbotron">
-        <h1 class="center">Welcome to SquidSync</h1>
+    <div class="well">
+        <img class="center-block" src="images/logo.png">
     </div>
-    <div class="ui video active" data-source="youtube" data-id="i_mKY2CQ9Kk"></div>
     <div class="row">
         <div ng-repeat="room in rooms" class="col-md-3">
             <div class="ui card">
                 <div class="image">
-                    <img src="/images/avatar/large/stevie.jpg">
+                    <img src="https://placekitten.com/263/263">
                 </div>
                 <div class="content">
-                    <a class="header">{{room.name}}</a>
+                    <a class="header" ng-click="joinRoom(room._id)">{{room.name}}</a>
                     <div class="meta">
-                        <span class="date">Joined in 2014</span>
+                        <span class="date">{{room._id}}</span>
                     </div>
                     <div class="description">{{room.desc}}</div>
                 </div>
@@ -22,6 +21,7 @@
             </div>
         </div>
     </div>
+    <!--<video id="vid1" src="" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360" data-setup='{ "techOrder": ["youtube"], "src": "www.youtube.com/watch?v=YlEb3L1PIco" }'>-->
     <div class="ui page dimmer transition" ng-class="{true: 'active', false: 'disabled'}[loading]">
         <div class="content">
             <div class="center">

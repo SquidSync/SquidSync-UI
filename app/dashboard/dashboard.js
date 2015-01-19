@@ -17,11 +17,18 @@ angular.module('squidSync.dashboard', [
             $scope.rooms = response
         });
         $scope.joinRoom = function(roomId) {
-            console.log('Woot! We tried to join room'+roomId)
+            console.log('Woot! We tried to join room '+roomId)
         };
-        $scope.loading = true;
+        //$scope.loading = true;
         $interval(function(){
             $scope.loading = false;
             console.log('We should stop now...')
         }, 5000, 1)
+})
+.directive('ssVideo', function() {
+        return {
+            template: function(elem, attr) {
+                return "<video id='swag' src='' class='video-js vjs-default-skin' controls preload='auto' width='640' height='360' data-setup='{ 'techOrder': ['youtube'], 'src': {{attr.url}} }'></video>"
+            }
+        }
 });
