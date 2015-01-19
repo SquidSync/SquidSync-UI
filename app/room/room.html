@@ -1,5 +1,65 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="container" ng-controller="roomControl">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="well">
+        <video id="vid1" src="" class="video-js vjs-default-skin center-block" controls preload="auto" width="640" height="360" data-setup='{ "techOrder": ["youtube"], "src": "www.youtube.com/watch?v=YlEb3L1PIco" }'></video>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="well">
+        <div class="ui divided items">
+          <div ng-repeat="item in roomList" class="item">
+            <div class="ui tiny image">
+              <img src="{{item.thumb}}">
+            </div>
+            <div class="content">
+              <div class="header">{{item.name}}</div>
+              <div class="meta">
+                <span class="price">{{item.plays}} Plays</span>
+                <span class="stay">Added By {{item.addedBy}}</span>
+              </div>
+              <div class="description">{{item.desc}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="well">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="ui comments">
+              <h3 class="ui dividing header">Chat</h3>
+              <div class="comment">
+                <a class="avatar">
+                  <img ng-src="{{message.user.avatar}}">
+                </a>
+                <div class="content">
+                  <a class="author">{{message.user.username}}</a>
+                  <div class="metadata">
+                    <span class="date">{{message.user.date}}</span>
+                  </div>
+                  <div class="text">{{message.content}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="ui eight cards">
+              <div ng-repeat="user in room.users" class="card">
+                <div class="image">
+                  <img ng-src="{{user.avatar}}">
+                </div>
+                <div class="content">
+                  <a class="header">{{user.username}}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

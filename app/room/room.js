@@ -5,11 +5,19 @@ angular.module('squidSync.room', [
 ])
 .config(function($stateProvider) {
   $stateProvider
-      .state('room', {
-        url: "/room/:id",
+      .state('core.room', {
+        url: "/room/:roomId",
         templateUrl: "room/room.html"
       })
 })
-.controller('View2Ctrl', [function() {
-
-}]);
+.controller('roomControl', function($scope, $rootScope, $stateParams) {
+        console.log($stateParams.roomId);
+        $scope.roomList = [];
+        $scope.roomList.push({
+            name: 'The Adventures of Derpicus',
+            desc: 'Then I eat your wonton soup',
+            thumb: 'http://i.imgur.com/y4qTbOM.jpg',
+            plays: 26,
+            addedBy: 'ChandlersHax'
+        })
+});
