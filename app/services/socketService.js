@@ -1,16 +1,16 @@
 'use strict';
+var socketServer = 'https://squidsquad-api.herokuapp.com:443'
 
-angular.module('squidSync.roomService', [])
-.service('roomService', function($http) {
-    var roomService = {};
-    roomService.rooms = function() {
-        return $http.get('https://squidsquad-api.herokuapp.com/api/rooms').then(function(response) {
-            return response.data
-        });
-    };
-    return roomService
-});
-var API = 'https://squidsquad-api.herokuapp.com:443';
+angular.module('squidSync.socketService', [])
+    .service('socketService', function($http) {
+        var socketService = {};
+        socketService.joinRoom = function(roomId) {
+
+        };
+        return socketService
+    });
+
+
 var control = io.connect(API+'/control');
 var news = io.connect(API+'/news');
 control.on('connect', function () {

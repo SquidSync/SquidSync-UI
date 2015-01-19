@@ -1,3 +1,36 @@
-<div ng-controller="dashboardCtrl">
-    <p>I'm on the Dashboard!</p>
+<div class="container" ng-controller="dashboardCtrl">
+    <div class="jumbotron">
+        <h1 class="center">Welcome to SquidSync</h1>
+    </div>
+    <div class="ui video active" data-source="youtube" data-id="i_mKY2CQ9Kk"></div>
+    <div class="row">
+        <div ng-repeat="room in rooms" class="col-md-3">
+            <div class="ui card">
+                <div class="image">
+                    <img src="/images/avatar/large/stevie.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">{{room.name}}</a>
+                    <div class="meta">
+                        <span class="date">Joined in 2014</span>
+                    </div>
+                    <div class="description">{{room.desc}}</div>
+                </div>
+                <div class="extra content">
+                    <a><i class="user icon"></i>{{room.views}} Views</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui page dimmer transition" ng-class="{true: 'active', false: 'disabled'}[loading]">
+        <div class="content">
+            <div class="center">
+                <h2 class="ui inverted icon header">
+                    <i class="mail icon"></i>
+                    Dimmer Message
+                    <div class="sub header">Dimmer sub-header</div>
+                </h2>
+            </div>
+        </div>
+    </div>
 </div>

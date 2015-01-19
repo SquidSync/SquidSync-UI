@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('squidSync.dashboard', [
+    'squidSync.roomService',
     'ui.router'
 ])
 .config(function($stateProvider) {
@@ -10,22 +11,17 @@ angular.module('squidSync.dashboard', [
             templateUrl: "dashboard/dashboard.html"
           })
 })
-.service('roomService', function($http) {
-    var roomService = {};
-    roomService.rooms = function() {
-        return $http.get('https://squidsquad-api.herokuapp.com/api/rooms').then(function(response) {
-            console.log(response.data[0]);
-            return response.data
-        });
-    };
-    return roomService
-})
-.controller('dashboardCtrl', function($scope, roomService) {
+.controller('dashboardCtrl', function($scope, roomService, $interval) {
         $scope.rooms = [];
         roomService.rooms().then(function(response) {
             $scope.rooms = response
         });
         $scope.joinRoom = function(roomId) {
             console.log('Woot! We tried to join room'+roomId)
-        }
+        };
+        $scope.loading = true;
+        $interval(function(){
+            $scope.loading = false;
+            console.log('We should stop now...')
+        }, 5000, 1)
 });
