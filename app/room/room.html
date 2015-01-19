@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-8">
       <div class="well">
-        <video id="vid1" src="" class="video-js vjs-default-skin center-block" controls preload="auto" width="640" height="360" data-setup='{ "techOrder": ["youtube"], "src": "www.youtube.com/watch?v=YlEb3L1PIco" }'></video>
+        <video ss-video src="" class="video-js vjs-default-skin center-block"></video>
       </div>
     </div>
     <div class="col-md-4">
@@ -10,7 +10,7 @@
         <div class="ui divided items">
           <div ng-repeat="item in roomList" class="item">
             <div class="ui tiny image">
-              <img src="{{item.thumb}}">
+              <img ng-src="{{item.thumb}}">
             </div>
             <div class="content">
               <div class="header">{{item.name}}</div>
@@ -39,7 +39,7 @@
                 <div class="content">
                   <a class="author">{{message.user.username}}</a>
                   <div class="metadata">
-                    <span class="date">{{message.user.date}}</span>
+                    <span class="date">{{message.date}}</span>
                   </div>
                   <div class="text">{{message.content}}</div>
                 </div>

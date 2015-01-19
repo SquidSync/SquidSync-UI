@@ -20,4 +20,35 @@ angular.module('squidSync.room', [
             plays: 26,
             addedBy: 'ChandlersHax'
         })
+})
+.directive('ssVideo', function() {
+        var linker = function($scope, element, attrs){
+            attrs.type = attrs.type || 'video/mp4';
+
+            var setup = {
+                'techOrder': ['youtube'],
+                src: 'https://www.youtube.com/watch?v=E0SeY2NBRxo',
+                'controls': true,
+                preload: 'auto',
+                autoplay: true,
+                width: 720,
+                height: 480
+            };
+            var videoid = 420;
+            attrs.id = "ssVideo"+videoid;
+            element.attr('id', attrs.id);
+            var player = _V_(attrs.id, setup, function(){
+                this.volume(0.05);
+                this.on('play', function() {
+                    console.log("Let's get this party started!")
+                });
+                this.on('ended', function() {
+                    console.log('awwww, we finished playing')
+                });
+            });
+        };
+        return {
+            restrict: 'A',
+            link: linker
+        }
 });
