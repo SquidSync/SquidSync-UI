@@ -1,8 +1,9 @@
 <div class="container" ng-controller="roomControl">
   <div class="row">
     <div class="col-md-8">
-      <div class="well">
-        <video ss-video src="" class="video-js vjs-default-skin center-block"></video>
+      <div class="well embed-responsive embed-responsive-16by9">
+        <video ss-video src="" ng-hide="videoDone" width="auto" height="auto" class="video-js vjs-default-skin center-block embed-responsive-item"></video>
+        {{videoDone}}
       </div>
     </div>
     <div class="col-md-4">
