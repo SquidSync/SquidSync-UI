@@ -4,7 +4,7 @@
         <div ng-repeat="room in rooms" class="col-md-3">
             <div class="ui card">
                 <div class="image">
-                    <img src="https://placekitten.com/256/64">
+                    <img src="https://placekitten.com/256/96">
                 </div>
                 <div class="content">
                     <span class="header"><a  ng-click="joinRoom(room._id)">{{room.name}}</a> <i class="user icon"></i>{{room.views}}</span>
@@ -26,5 +26,6 @@
                 </h2>
             </div>
         </div>
-    </div>
+    </div><button type="button" class="btn btn-lg btn-danger" ng-click="myAside()">Click me</button>
+
 </div>
