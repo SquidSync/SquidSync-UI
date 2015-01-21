@@ -2,15 +2,23 @@
     <div class="aside-dialog">
         <div class="aside-content">
             <div class="aside-body">
+                <div style="margin: 4px;">
+                    <span class="pull-right"><a ng-click="$hide()"><i class="fa-camera-retro fa-4x"></i></a></span>
+                </div>
                 <!-- <li data-match-route="/signup></li> This was part of the original links and i have no idea what it does -->
-                <span><a href="/login">Login</a>  |  <a href="/signup">Sign up</a></span> <a class="close" ng-click="$hide()"><i class="fa-camera-retro fa-lg"></i></a>
+                <div ng-if="!currentUser">
+                    <a href="/login">Login</a> | <a href="/signup">Sign up</a>
+                </div>
+                <div ng-if="currentUser">
+                    <a class="navbar-text" ng-bind="currentUser.email"></a> | <a href="javascript:void(0)" ng-click="logout()">Logout</a>
+                </div>
 
                 <h4>Site Navigation</h4>
                 <ul>
-                    <li>Dashboard</li>
-                    <li>My Profile</li>
-                    <li>My Room</li>
-                    <li>About</li>
+                    <li><i class="fa-dashboard"></i>&nbsp;Dashboard</li>
+                    <li><i class="fa-user"></i>&nbsp;My Profile</li>
+                    <li><i class="fa-comments"></i>&nbsp;My Room</li>
+                    <li><i class="fa-question-circle"></i>&nbsp;About</li>
                 </ul>
                 <h4>Views</h4>
                 <ul>
@@ -27,7 +35,7 @@
             </div>
 
             <div class="aside-footer">
-                <p>App version here maybe?</p>
+                <div>App Version <span app-version></span></div>
                 <img src="images/harold.png">
             </div>
 
