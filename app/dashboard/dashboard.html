@@ -1,5 +1,14 @@
 <div class="container" ng-controller="dashboardCtrl">
     <img class="center-block" src="images/logo.png" style="margin-top: 24px; margin-bottom: 24px;">
+    <div class="form-inline" style="margin-bottom: 24px;">
+        <input type="text" class="form-control" id="searchBar" placeholder="Search" style="width:70%;">
+        <select class="form-control" style="width:25%;">
+            <option>Relevance</option>
+            <option>Alphabetical</option>
+            <option>Viewers</option>
+            <option>Room Owner</option>
+        </select>
+    </div>
     <div class="row">
         <div ng-repeat="room in rooms" class="col-md-3">
             <div class="ui card">
@@ -16,16 +25,18 @@
             </div>
         </div>
     </div>
+
+
+
     <div class="ui page dimmer transition" ng-class="{true: 'active', false: 'disabled'}[loading]">
         <div class="content">
             <div class="center">
                 <h2 class="ui inverted icon header">
-                    <i class="mail icon"></i>
+                    <i class="mail icon fa-spin"></i>
                     Dimmer Message
                     <div class="sub header">Dimmer sub-header</div>
                 </h2>
             </div>
         </div>
-    </div><button type="button" class="btn btn-lg btn-danger" ng-click="myAside()">Click me</button>
-
+    </div>
 </div>

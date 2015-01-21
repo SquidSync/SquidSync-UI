@@ -20,7 +20,7 @@ angular.module('squidSync.core', [
 //    };
 //    return roomService
 //})
-.controller('coreCtrl', function($scope, roomService) {
+.controller('coreCtrl', function($scope, roomService, $aside) {
         $scope.rooms = [];
         roomService.rooms().then(function(response) {
             $scope.rooms = response
@@ -28,4 +28,8 @@ angular.module('squidSync.core', [
         $scope.joinRoom = function(roomId) {
             console.log('Woot! We tried to join room'+roomId)
         }
+        $scope.myAside = function() {
+            console.log('rekt');
+            $aside({ template: 'aside.html', show: true});
+        };
 });

@@ -1,4 +1,4 @@
-<div ng-controller="coreCtrl" class="navbar navbar-default navbar-static-top container-fluid" role="navigation" bs-navbar>
+<!--<div ng-controller="coreCtrl" class="navbar navbar-default navbar-static-top container-fluid" role="navigation" bs-navbar>
     <div class="navbar-header">
         <a class="navbar-brand" ui-sref="core.dashboard">
             <span>Squid<strong>Sync</strong></span>
@@ -8,7 +8,7 @@
         <!--<li data-match-route="/$"><a href="/">Home</a></li>-->
         <!--<li data-match-route="/add"><a href="/add">Add</a></li>-->
     <!--</ul>-->
-    <ul class="nav navbar-nav pull-right" ng-if="!currentUser">
+    <!--<ul class="nav navbar-nav pull-right" ng-if="!currentUser">
         <li data-match-route="/login"><a href="/login">Login</a></li>
         <li data-match-route="/signup"><a href="/signup">Sign up</a></li>
     </ul>
@@ -16,5 +16,9 @@
         <li class="navbar-text" ng-bind="currentUser.email"></li>
         <li><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>
     </ul>
+
+</div>-->
+<div ng-controller="coreCtrl" style="margin: 24px;">
+    <span class="pull-right"><a ng-click="myAside()"><i class="fa-bars fa-4x"></i></a></span>
 </div>
 <div ui-view></div>

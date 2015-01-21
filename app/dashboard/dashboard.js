@@ -12,15 +12,11 @@ angular.module('squidSync.dashboard', [
             templateUrl: "dashboard/dashboard.html"
           })
 })
-.controller('dashboardCtrl', function($scope, roomService, $interval, $state, $aside) {
+.controller('dashboardCtrl', function($scope, roomService, $interval, $state) {
         $scope.rooms = [];
         roomService.rooms().then(function(response) {
             $scope.rooms = response
         });
-        $scope.myAside = function() {
-            console.log('rekt');
-            $aside({ template: 'aside.html', show: true});
-        };
         $scope.joinRoom = function(roomId) {
             $state.go('core.room', {roomId:roomId});
             console.log('Woot! We tried to join room '+roomId)
