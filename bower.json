@@ -17,7 +17,8 @@
     "semantic-ui": "~1.7.3",
     "bootstrap-additions": "~0.2.3",
     "videojs": "~4.11.3",
-    "videojs-youtube": "~1.2.8"
+    "videojs-youtube": "~1.2.8",
+    "fontawesome": "~4.2.0"
   },
   "resolutions": {
     "angular": ">= 1.0.8"
