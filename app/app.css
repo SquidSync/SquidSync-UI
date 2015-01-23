@@ -32,3 +32,28 @@ body {
   content: "";
   padding: 0;
 }
+
+.container-controls {
+  text-align: justify;
+  max-height: 20px;
+}
+.container-controls div {
+  display: inline-block;
+}
+.container-controls:after {
+  content: '';
+  width:100%;
+  display: inline-block;
+}
+
+/* Dev classes, for when I'm breaking things. */
+
+.div-red {
+  background-color: red;
+}
+.div-green {
+  background-color: green;
+}
+.div-blue {
+  background-color: blue;
+}
