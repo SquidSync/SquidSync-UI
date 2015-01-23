@@ -3,7 +3,7 @@
         <div class="aside-content">
             <div class="aside-body">
                 <div style="margin: 4px;">
-                    <span class="pull-right"><a ng-click="$hide()"><i class="fa-camera-retro fa-4x"></i></a></span>
+                    <span class="pull-right"><a ng-click="$hide()"><i class="fa fa-close fa-4x"></i></a></span>
                 </div>
                 <!-- <li data-match-route="/signup></li> This was part of the original links and i have no idea what it does -->
                 <div ng-if="!currentUser">
@@ -14,29 +14,29 @@
                 </div>
 
                 <h4>Site Navigation</h4>
-                <ul>
-                    <li><i class="fa-dashboard"></i>&nbsp;Dashboard</li>
-                    <li><i class="fa-user"></i>&nbsp;My Profile</li>
-                    <li><i class="fa-comments"></i>&nbsp;My Room</li>
-                    <li><i class="fa-question-circle"></i>&nbsp;About</li>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-dashboard"></i>&nbsp;Dashboard</li>
+                    <li><i class="fa fa-user"></i>&nbsp;My Profile</li>
+                    <li><i class="fa fa-comments"></i>&nbsp;My Room</li>
+                    <li><i class="fa fa-question-circle"></i>&nbsp;About</li>
                 </ul>
                 <h4>Views</h4>
-                <ul>
-                    <li>Default</li>
-                    <li>Festival</li>
-                    <li>Theater</li>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-compress"></i>&nbsp;Default</li>
+                    <li><i class="fa fa-users"></i>&nbsp;Festival</li>
+                    <li><i class="fa fa-expand"></i>&nbsp;Theater</li>
                 </ul>
                 <h4>Room History</h4>
-                <ul>
+                <ul class="list-unstyled">
                     <li>Room 1</li>
                     <li>Room 2</li>
                     <li>Room 3</li>
                 </ul>
+                <img src="images/harold.png">
             </div>
-
             <div class="aside-footer">
                 <div>App Version <span app-version></span></div>
-                <img src="images/harold.png">
+
             </div>
 
         </div>
