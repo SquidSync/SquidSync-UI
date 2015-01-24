@@ -46,6 +46,14 @@ body {
   display: inline-block;
 }
 
+.roomtile-content {
+  padding: 8px;
+}
+.roomtile-header {
+  font-size: 14pt;
+}
+
+
 /* Dev classes, for when I'm breaking things. */
 
 .div-red {
