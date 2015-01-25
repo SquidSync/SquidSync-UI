@@ -1,8 +1,8 @@
 'use strict';
-//var API = 'http://127.0.0.1:5000/api';
-//var socketAPI = '127.0.0.1:5000'
-var API = 'https://squidsquad-api.herokuapp.com/api';
-var socketAPI = 'https://squidsquad-api.herokuapp.com:443';
+var API = 'http://127.0.0.1:5000/api';
+var socketAPI = '127.0.0.1:5000';
+//var API = 'https://squidsquad-api.herokuapp.com/api';
+//var socketAPI = 'https://squidsquad-api.herokuapp.com:443';
 
 angular.module('squidSync.roomService', [])
 .service('roomService', function($http) {
