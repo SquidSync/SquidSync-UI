@@ -3,20 +3,18 @@
     <div class="form-inline" style="margin-bottom: 24px; padding-left:20%; padding-right: 20%;"><!--Need to make this Responsive.-->
         <input type="text" class="form-control" id="searchBar" placeholder="Search" style="width:100%;">
     </div>
-    <div class="row">
-        <div ng-repeat="room in rooms" class="ui six doubling cards">
-            <div class="ui card">
-                <div class="image">
-                    <img class="image-responsive" src="https://placekitten.com/512/192">
-                </div>
-                <div class="content">
-                    <span class="header"><a  ng-click="joinRoom(room._id)">{{room.name}}</a> <i class="user icon"></i>{{room.views}}</span>
-                    <div class="description">{{room.desc}}</div>
-                </div>
-                <!--<div class="extra content">
-                    <span class="date">{{room._id}}</span>
-                </div>-->
+    <div class="ui six doubling cards">
+        <div ng-repeat="room in rooms" class="card">
+            <div class="image">
+                <img class="image-responsive" src="https://placekitten.com/512/192">
             </div>
+            <div class="content">
+                <span class="header"><a  ng-click="joinRoom(room._id)">{{room.name}}</a> <i class="user icon"></i>{{room.views}}</span>
+                <div class="description">{{room.desc}}</div>
+            </div>
+            <!--<div class="extra content">
+                <span class="date">{{room._id}}</span>
+            </div>-->
         </div>
     </div>
 
